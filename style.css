@@ -1,15 +1,20 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 @font-face {
     font-family: "myfont";
-    src: url('font/Recoleta-RegularDEMO.otf');
+    src: url('font/Gilroy-FREE/Gilroy-Light.otf');
+  }
+
+@font-face {
+    font-family: "myfontbold";
+    src: url('font/Gilroy-FREE/Gilroy-ExtraBold.otf');
   }
 
   body{
     margin: 0 auto;
     max-width: 1600px;
-    font-family: "Noto Sans", sans-serif;
-    background-color: #c6e9f5;
+    font-family: "myfont", sans-serif;
+    background-color: #ebebeb;
 }
 
 a{
@@ -28,7 +33,8 @@ ul{
 
 .common-heading{
     color: #222;
-    font-family: 'myfont';
+    text-transform: uppercase;
+    font-family: 'myfontbold', sans-serif;
     text-align: center;
     font-weight: 700;
 }
@@ -38,18 +44,15 @@ ul{
     display: flex;
     justify-content: center;
     max-height: 50px;
-    padding: 2px 15px;
 }
 
 .upper-header-ticker{
     box-sizing: border-box;
     height: 40px;
     align-items: center;
-    background-color: #c6e9f5;
     display: flex;
     justify-content: center;
     overflow: hidden;
-    padding: 2px 15px;
 }
 
 .upper-header-ticker ul {
@@ -101,8 +104,9 @@ ul{
     overflow: hidden;
     text-overflow: ellipsis;
     max-width: 100%;
-    color: #042049;
-    font-weight: 600;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 500;
     padding:  0 1rem;
     box-sizing: border-box;
   }
@@ -173,13 +177,39 @@ ul{
 /* header lower css start */
 
 .header-lower{
+  padding: 0 20px;
     display: grid;
     grid-template-columns: repeat(1,1fr);
 }
 
+/* blue uper #020ece, #04208d */
+
+#header{
+  background: rgb(33,41,212);
+background: linear-gradient(0deg, rgba(33,41,212,1) 0%, rgba(0,0,23,1) 100%);
+
+
+  /* background: rgb(33,41,212);
+background: linear-gradient(0deg, rgba(33,41,212,1) 0%, rgba(30,30,68,1) 100%); */
+  /* background-image: url('images/blue-bg-offer.avif'); 
+ background-size: cover; 
+  background-position: 100% 100%; */
+ /* background: rgb(0,5,24); */
+/* background: linear-gradient(0deg, rgba(0,5,24,1) 0%, rgba(2,14,206,1) 100%);  */
+/* background-color: #23005c; */
+ /* background-color: #182b3a;
+background-image: linear-gradient(315deg, #182b3a 0%, #20a4f3 74%);  */
+/* background-color: #2a2a72;
+background-image: linear-gradient(315deg, #2a2a72 0%, #009ffd 74%);  */
+/* background-color: #2234ae;
+background-image: linear-gradient(315deg, #2234ae 0%, #100a47 74%); */
+
+
+
+    /* background-image: radial-gradient(ellipse at 56% 59%, rgb(0 9 134 / 62%) 0, rgba(50, 57, 154, 0) 50%), radial-gradient(ellipse at 29% 34%, #2d288a 0, rgba(45, 40, 138, 0) 50%), radial-gradient(ellipse at 88% 10%, rgb(0 70 136 / 97%) 0, rgba(44, 117, 186, 0) 50%), radial-gradient(ellipse at 66% 31%, rgb(7 10 16 / 75%) 0, rgba(48, 95, 171, 0) 50%), radial-gradient(ellipse at 41% 81%, #5c32bd 0, rgba(92, 50, 189, 0) 50%), radial-gradient(ellipse at 98% 99%, rgb(69 0 189 / 84%) 0, rgba(142, 77, 255, 0) 50%), radial-gradient(ellipse at 36% 95%, rgba(70, 38, 166, .8) 0, rgba(70, 38, 166, 0) 50%), radial-gradient(ellipse at 46% 67%, rgba(94, 94, 237, .73) 0, rgba(94, 94, 237, 0) 50%), radial-gradient(ellipse at 60% 45%, rgb(3 0 221 / 91%) 0, rgba(47, 46, 133, 0) 50%); */
+}
+
 .top-header-lower{
-    background-color: #042049;
-    padding: 10px 25px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -213,6 +243,7 @@ ul{
 
 .search-div input::placeholder{
     color: #fff;
+    font-size: 13px;
 }
 
 .search-div input:focus{
@@ -236,8 +267,9 @@ ul{
 }
 
 .normal-nav-links a{
-    font-size: 13px;
-    font-weight: 600;
+  font-size: 14px;
+  color: #151515;
+  font-weight: 600;
     color: #fff;
 }
 
@@ -252,7 +284,6 @@ ul{
 }
 
 .bottom-header-lower{
-    background-color: #042049;
     color: #fff;
 }
 
@@ -261,6 +292,7 @@ ul{
     align-items: center;
     justify-content: space-around;
     width: 100%;
+    position: relative;
   }
   
     ul.nav{
@@ -275,7 +307,7 @@ ul{
     ul.nav a{
         text-decoration: none;
         cursor: pointer;
-        font-size: 14px;
+        font-size: 18px;
         font-weight: 600;
         padding: 4px 15px 15px;
       /* background-color: transparent; */
@@ -283,7 +315,7 @@ ul{
     }
   
     ul.nav a:hover{
-      color: #012952;
+      color: #042049;
       background-color: #fff;
       border-radius: 5px 5px 0px 0px;
     }
@@ -306,7 +338,7 @@ ul{
       margin: 0;
       padding: 0;
       left: 0;
-      top: 138%;
+      top: 150%;
       visibility: hidden;
       z-index: 10;
       -webkit-transition: all 0.3s linear 0s;
@@ -344,7 +376,7 @@ ul{
     }
   
     ul.nav .dropdown ul li {
-      color: #012952;
+      color: #042049;
     }
   
 /* header lower css end */
@@ -354,14 +386,15 @@ ul{
 /* banner css start */
 
 .banner-section .swiper-slide img{
-    height: 400px;
+    height: 300px;
+    border-radius: 20px;
     width: 100%;
     display: flex;
 }
 
-.banner-section .swiper-slide{
+/* .banner-section .swiper-slide{
     background-color: #042049 ;
-}
+} */
 
 .banner-section .swiper-button-next, .banner-section .swiper-button-prev{
     color: #fff;
@@ -390,9 +423,12 @@ ul{
 /* counter section css start */
 
 .counter-section{
-  margin: 10px 0px;
-  background-color: #f6cc32;
-  padding: 15px 0px;
+  margin: 5px 0px;
+  background: rgb(255,205,80);
+background: linear-gradient(0deg, rgba(255,205,80,1) 0%, rgba(255,251,70,1) 100%);
+  padding: 25px 0px;
+  /* background-position: 100%;
+  background-size: cover; */
 }
 
 
@@ -409,7 +445,6 @@ ul{
 }
 
 .box h3{
-  font-family: 'myfont';
   font-weight: 600;
   margin: 0;
 }
@@ -422,7 +457,6 @@ ul{
   line-height: 1.5;
   margin: 0;
   text-align: center;
-  font-family: 'myfont';
 }
 
 
@@ -433,7 +467,7 @@ ul{
 
 .features-section{
     padding: 10px 0px;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
     background-color: #fff;
 }
 
@@ -446,14 +480,14 @@ ul{
 
 .features i{
     background-color: #c6e9f5;
-    color: #012952;
+    color: #042049;
     padding: 10px;
     border-radius: 50%;
     font-size: 20px;
 }
 
 .features span{
-    color: #012952;
+    color: #042049;
     font-weight: 600;
 }
 
@@ -486,7 +520,6 @@ ul{
 
 .categories .card .card-text{
   color: #000;
-  font-family: Noto Sans;
   font-size: 16px;
   font-weight: 500;
   margin-bottom: 0;
@@ -502,11 +535,12 @@ ul{
 /* offer banner css start */
 
 .offer-banner-section{
-  background-image: url('images/offer-banner.jpg');
+  background: rgb(33,41,212);
+  background: linear-gradient(0deg, rgba(33,41,212,1) 0%, rgba(0,0,23,1) 100%);
   height: 150px;
-  background-size: cover;
-  background-position: center;
-  margin: 10px 0px;
+  /* background-size: cover;
+  background-position: center; */
+  margin: 5px 0px;
 }
 
 /* offer banner css end */
@@ -516,17 +550,25 @@ ul{
 .top-selling-section{
   background-color: #fff;
   padding: 30px 0px;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
+}
+
+.new-launches-product{
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
 }
 
 .new-launches-section{
-  background-color: #fff0b9;
+  background: rgb(255,205,80);
+background: linear-gradient(0deg, rgba(255,205,80,1) 0%, rgba(255,251,70,1) 100%);
+  /* background-position: 100%;
+  background-size: cover;
+  background-repeat: no-repeat; */
   padding: 30px 0px;
-  margin: 10px 0px;
+  margin: 5px 0px;
 }
 
 .top-selling-section .common-heading, .new-launches-section .common-heading{
-  padding: 0 50px 10px 50px;
+  padding: 0 50px 20px 50px;
 }
 
 .top-selling-section .swiper-wrapper, .new-launches-section .swiper-wrapper{
@@ -630,7 +672,6 @@ ul{
 }
 
 .ts-product-mrp{
-  font-family: "Noto Sans";
   font-size: 18px;
   font-style: normal;
   font-weight: 600;
@@ -665,7 +706,7 @@ ul{
 .top-selling-section .swiper-button-next:after, .top-selling-section .swiper-button-prev:after{
   font-size: 18px;
   padding: 15px;
-  background-color: #012952;
+  background-color: #042049;
   border-radius: 50%;
   font-weight: 900;
 }
@@ -687,11 +728,11 @@ ul{
 .online-store-section{
   background-color: #fff;
   padding: 30px 0px;
-  margin: 10px 0px;
+  margin: 5px 0px;
 }
 
 .online-store-section .common-heading{
-  padding: 30px 20px 10px 20px;
+  padding: 0 50px 20px 50px;
 }
 
 .online-store-categories-inner{
@@ -717,7 +758,6 @@ padding: 10px;
 
 .os-categories .card .card-text{
 color: #000;
-font-family: Noto Sans;
 font-size: 16px;
 font-weight: 600;
 margin-bottom: 0;
@@ -727,18 +767,18 @@ opacity: .8;
 .TabButton {
     padding: 10px 25px;
   border-radius: 50px;
-  border: 1px solid #012952;
-  color: #012952;
+  border: 1px solid #042049;
+  color: #042049;
   font-weight: 600;
   margin: 0;
   font-size: 14px;
   cursor: pointer;
 }
 .TabButtonSelected {
-  background-color: #012952;
+  background-color: #042049;
   padding: 10px 25px;
   border-radius: 50px;
-  border: 1px solid #012952;
+  border: 1px solid #042049;
   color: #fff;
   font-weight: 500;
 }
@@ -756,7 +796,7 @@ opacity: .8;
 
 .contact-banner-section{
   background-color: #fff;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
 }
 
 .contact-banner-inner{
@@ -765,7 +805,8 @@ opacity: .8;
 }
 
 .left-contact-banner{
-  background-color: #012952;
+  background: rgb(33,41,212);
+  background: linear-gradient(0deg, rgba(33,41,212,1) 0%, rgba(0,0,23,1) 100%);
   padding: 70px;
   display: flex;
   flex-direction: column;
@@ -806,8 +847,8 @@ opacity: .8;
 /* recent searches section css start */
 
 .recent-searches-section{
-  background-color: #c6e9f5;
-  color: #012952;
+  background-color: #ebebeb;
+  color: #042049;
   padding: 30px 0px;
 }
 
@@ -841,9 +882,9 @@ opacity: .8;
 /* testimonial section css start */
 
 .testimonial-section{
-  padding: 30px 0px 50px 0px;
+  padding: 30px 0px 80px 0px;
   background-color: #fff;
-  margin: 10px 0px;
+  margin: 5px 0px;
 }
 
 .testimonial-section .swiper-wrapper{
@@ -885,7 +926,7 @@ opacity: .8;
 }
 
 .testimonial-section .swiper-button-prev, .testimonial-section .swiper-button-next{
-  color: #012952;
+  color: #042049;
   background-color: #c6e9f5;
   padding: 8px 15px;
   border-radius: 50%;
@@ -902,7 +943,8 @@ opacity: .8;
 /* footer css start */
 
 #footer{
-  background-color: #012952;
+  background: rgb(33,41,212);
+  background: linear-gradient(0deg, rgba(33,41,212,1) 0%, rgba(0,0,23,1) 100%);
   color: #fff;
 }
 
@@ -918,7 +960,6 @@ hr.footer{
 }
 
 .links ul li , .link ul li {
-  font-family: 'myfont';
   font-size: 14px;
 }
 
@@ -944,7 +985,6 @@ hr.dash{
 
 .contact-links{
   margin-top: 30px;
-  font-family: 'myfont';
   font-size: 14px;
 }
 
@@ -978,7 +1018,7 @@ hr.dash{
   position: absolute; 
   right: 3%;
   top: 13%;
-  color: #012952;
+  color: #042049;
   background-color: #2FB1DB;
   padding: 10px;
   border-radius: 50%;
@@ -1001,7 +1041,7 @@ hr.dash{
 }
 
 .right-middle-footer i{
-  color: #012952;
+  color: #042049;
   background-color: #fff;
   padding: 10px;
   border-radius: 50%;
